@@ -1,0 +1,175 @@
+{
+  "products": [{
+    "id": 1,
+    "imageUrl": "http://dummyimage.com/230x100.png/cc0000/ffffff",
+    "name": "Bread - Multigrain Oval",
+    "count": 1,
+    "size": {
+      "width": 47,
+      "height": 83
+    },
+    "weight": "105g",
+    "comments": null
+  },
+    {
+      "id": 2,
+      "imageUrl": "http://dummyimage.com/139x100.png/dddddd/000000",
+      "name": "Oil - Avocado",
+      "count": 2,
+      "size": {
+        "width": 96,
+        "height": 2
+      },
+      "weight": "745g",
+      "comments": null
+    },
+    {
+      "id": 3,
+      "imageUrl": "http://dummyimage.com/244x100.png/ff4444/ffffff",
+      "name": "Veal - Round, Eye Of",
+      "count": 3,
+      "size": {
+        "width": 30,
+        "height": 10
+      },
+      "weight": "148g",
+      "comments": null
+    },
+    {
+      "id": 4,
+      "imageUrl": "http://dummyimage.com/103x100.png/5fa2dd/ffffff",
+      "name": "Onion - Dried",
+      "count": 4,
+      "size": {
+        "width": 63,
+        "height": 9
+      },
+      "weight": "332g",
+      "comments": null
+    },
+    {
+      "id": 5,
+      "imageUrl": "http://dummyimage.com/176x100.png/5fa2dd/ffffff",
+      "name": "Calaloo",
+      "count": 5,
+      "size": {
+        "width": 82,
+        "height": 13
+      },
+      "weight": "648g",
+      "comments": null
+    },
+    {
+      "id": 6,
+      "imageUrl": "http://dummyimage.com/109x100.png/ff4444/ffffff",
+      "name": "Gooseberry",
+      "count": 6,
+      "size": {
+        "width": 60,
+        "height": 55
+      },
+      "weight": "420g",
+      "comments": null
+    },
+    {
+      "id": 7,
+      "imageUrl": "http://dummyimage.com/213x100.png/dddddd/000000",
+      "name": "Flower - Carnations",
+      "count": 7,
+      "size": {
+        "width": 91,
+        "height": 18
+      },
+      "weight": "467g",
+      "comments": null
+    },
+    {
+      "id": 8,
+      "imageUrl": "http://dummyimage.com/229x100.png/ff4444/ffffff",
+      "name": "Shrimp - 31/40",
+      "count": 8,
+      "size": {
+        "width": 57,
+        "height": 8
+      },
+      "weight": "288g",
+      "comments": null
+    },
+    {
+      "id": 9,
+      "imageUrl": "http://dummyimage.com/147x100.png/dddddd/000000",
+      "name": "Grapes - Green",
+      "count": 9,
+      "size": {
+        "width": 25,
+        "height": 46
+      },
+      "weight": "686g",
+      "comments": null
+    },
+    {
+      "id":10,
+      "imageUrl":"http://dummyimage.com/193x100.png/ff4444/ffffff",
+      "name":"Veal - Loin",
+      "count":10,
+      "size": {
+        "width": 27,
+        "height": 56
+      },
+      "weight":"139g",
+      "comments":null
+    }],
+  "comments": [
+    {
+      "id": 1,
+      "productId": 3,
+      "description": "prop pity sags",
+      "date": "31.08.2022"
+    }, {
+      "id": 2,
+      "productId": 9,
+      "description": "mush idea some",
+      "date": "27.12.2021"
+    }, {
+      "id": 3,
+      "productId": 10,
+      "description": "ox's soar eels",
+      "date": "04.10.2021"
+    }, {
+      "id": 4,
+      "productId": 4,
+      "description": "lids go's cows",
+      "date": "26.05.2022"
+    }, {
+      "id": 5,
+      "productId": 7,
+      "description": "show race fees",
+      "date": "26.09.2021"
+    }, {
+      "id": 6,
+      "productId": 2,
+      "description": "pang whys putt",
+      "date": "26.05.2022"
+    }, {
+      "id": 7,
+      "productId": 3,
+      "description": "mind hurl wash",
+      "date": "06.11.2021"
+    }, {
+      "id": 8,
+      "productId": 8,
+      "description": "bail pi's yarn",
+      "date": "04.03.2022"
+    }, {
+      "id": 9,
+      "productId": 4,
+      "description": "blip ax's burp",
+      "date": "24.08.2022"
+    }, {
+      "id": 10,
+      "productId": 10,
+      "description": "moor foul myth",
+      "date": "06.08.2022"
+    }
+  ]
+}
