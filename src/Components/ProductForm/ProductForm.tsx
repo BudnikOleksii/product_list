@@ -179,7 +179,8 @@ export const ProductForm: FC = () => {
       <button
         className="button is-primary"
         type="submit"
-        disabled={!product.imageUrl || !product.name || !product.count || !product.weight}
+        disabled={!product.imageUrl || !product.name || !product.count || !product.weight
+      || !product.size.width || !product.size.height}
       >
         {productId ? 'Edit a Product' : 'Add a Product'}
       </button>
