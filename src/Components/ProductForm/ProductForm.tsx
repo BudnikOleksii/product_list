@@ -32,8 +32,8 @@ export const ProductForm: FC = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const isValidTextInput = (value: string) => {
-    if (/[^a-zA-Z ]/g.test(value) || value.length < 4) {
-      setErrorMessage('Input text field should contain only letters and spaces and more than 4 letters, ISBN should be valid number');
+    if (/[^a-zA-Z/:. ]/g.test(value) || value.length < 4) {
+      setErrorMessage('Input text field should contain more than 4 characters and should be valid');
 
       return false;
     }

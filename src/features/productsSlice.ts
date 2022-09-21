@@ -48,8 +48,6 @@ export const productsStateSlice = createSlice({
     });
 
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       state.products = action.payload;
       state.productsIsLoading = false;
     });
@@ -60,14 +58,10 @@ export const productsStateSlice = createSlice({
     });
 
     builder.addCase(addNewProduct.fulfilled, (state, action) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       state.products.push(action.payload);
     });
 
     builder.addCase(updateProductById.fulfilled, (state, action) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       state.products = state.products.map(product => (
         product.id === action.meta.arg.id ? action.payload : product
       ));
@@ -81,5 +75,4 @@ export const productsStateSlice = createSlice({
   },
 });
 
-// export const { clearPosts } = productsStateSlice.actions;
 export default productsStateSlice.reducer;
