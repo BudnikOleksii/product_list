@@ -7,6 +7,18 @@ export const getProducts = (): Promise<Product[]> => {
   return client.get<Product[]>(ENDPOINTS.products);
 };
 
+export const createProduct = (data: Omit<Product, 'id'>): Promise<Product> => {
+  return client.post<Product>(ENDPOINTS.products, data);
+};
+
+export const updateProduct = (data: Product): Promise<Product> => {
+  return client.put<Product>(ENDPOINTS.productById(data.id), data);
+};
+
+export const deleteProductById = (id: Id) => {
+  return client.delete(ENDPOINTS.productById(id));
+};
+
 export const getCommentsByProductId = (id: Id): Promise<Comment[]> => {
   return client.get<Comment[]>(ENDPOINTS.commentsByProductId(id));
 };

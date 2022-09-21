@@ -4,10 +4,11 @@ const BASE_URL = 'http://127.0.0.1:4000';
 
 export const ENDPOINTS = {
   products: '/products',
+  productById: (id: Id) => `/products/${id}`,
   commentsByProductId: (id: Id) => `/comments?productId=${id}`,
 };
 
-type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
+type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
 const request = <T>(
   url: string,
@@ -36,6 +37,6 @@ const request = <T>(
 export const client = {
   get: <T>(url: string) => request<T>(url),
   post: <T>(url: string, data: any) => request<T>(url, 'POST', data),
-  patch: <T>(url: string, data: any) => request<T>(url, 'PATCH', data),
+  put: <T>(url: string, data: any) => request<T>(url, 'PUT', data),
   delete: (url: string) => request(url, 'DELETE'),
 };

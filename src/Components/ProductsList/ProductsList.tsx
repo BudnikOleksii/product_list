@@ -32,7 +32,7 @@ export const ProductsList: FC = () => {
             >
               <Link
                 className="button is-primary is-rounded m-2"
-                to="/books/edit"
+                to="/product/edit"
               >
                 Add a new product
               </Link>

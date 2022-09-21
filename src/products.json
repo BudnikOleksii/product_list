@@ -1,16 +1,17 @@
 {
-  "products": [{
-    "id": 1,
-    "imageUrl": "http://dummyimage.com/230x100.png/cc0000/ffffff",
-    "name": "Bread - Multigrain Oval",
-    "count": 1,
-    "size": {
-      "width": 47,
-      "height": 83
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "http://dummyimage.com/230x100.png/cc0000/ffffff",
+      "name": "Bread - Multigrain Oval",
+      "count": 1,
+      "size": {
+        "width": 47,
+        "height": 83
+      },
+      "weight": "105g",
+      "comments": null
     },
-    "weight": "105g",
-    "comments": null
-  },
     {
       "id": 2,
       "imageUrl": "http://dummyimage.com/139x100.png/dddddd/000000",
@@ -108,64 +109,110 @@
       "comments": null
     },
     {
-      "id":10,
-      "imageUrl":"http://dummyimage.com/193x100.png/ff4444/ffffff",
-      "name":"Veal - Loin",
-      "count":10,
+      "id": 10,
+      "imageUrl": "http://dummyimage.com/193x100.png/ff4444/ffffff",
+      "name": "Veal - Loin",
+      "count": 10,
       "size": {
         "width": 27,
         "height": 56
       },
-      "weight":"139g",
-      "comments":null
-    }],
+      "weight": "139g",
+      "comments": null
+    },
+    {
+      "imageUrl": "ssdd",
+      "name": "dddd",
+      "count": -1,
+      "size": {
+        "width": 1,
+        "height": 1
+      },
+      "weight": "0g",
+      "comments": [],
+      "id": 11
+    },
+    {
+      "imageUrl": "test",
+      "name": "test",
+      "count": 5,
+      "size": {
+        "width": 2,
+        "height": 9
+      },
+      "weight": "3g",
+      "comments": [],
+      "id": 12
+    },
+    {
+      "imageUrl": "sfhdh",
+      "name": "dhdh",
+      "count": 3,
+      "size": {
+        "width": 1,
+        "height": 3
+      },
+      "weight": "2g",
+      "comments": [],
+      "id": 13
+    }
+  ],
   "comments": [
     {
       "id": 1,
       "productId": 3,
       "description": "prop pity sags",
       "date": "31.08.2022"
-    }, {
+    },
+    {
       "id": 2,
       "productId": 9,
       "description": "mush idea some",
       "date": "27.12.2021"
-    }, {
+    },
+    {
       "id": 3,
       "productId": 10,
       "description": "ox's soar eels",
       "date": "04.10.2021"
-    }, {
+    },
+    {
       "id": 4,
       "productId": 4,
       "description": "lids go's cows",
       "date": "26.05.2022"
-    }, {
+    },
+    {
       "id": 5,
       "productId": 7,
       "description": "show race fees",
       "date": "26.09.2021"
-    }, {
+    },
+    {
       "id": 6,
       "productId": 2,
       "description": "pang whys putt",
       "date": "26.05.2022"
-    }, {
+    },
+    {
       "id": 7,
       "productId": 3,
       "description": "mind hurl wash",
       "date": "06.11.2021"
-    }, {
+    },
+    {
       "id": 8,
       "productId": 8,
       "description": "bail pi's yarn",
       "date": "04.03.2022"
-    }, {
+    },
+    {
       "id": 9,
       "productId": 4,
       "description": "blip ax's burp",
       "date": "24.08.2022"
-    }, {
+    },
+    {
       "id": 10,
       "productId": 10,
       "description": "moor foul myth",

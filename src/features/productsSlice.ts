@@ -1,7 +1,9 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { Product } from '../types/Product';
-import { getProducts } from '../api';
+import {
+  createProduct, deleteProductById, getProducts, updateProduct,
+} from '../api';
 
 type ProductsState = {
   products: Product[];
@@ -18,6 +20,21 @@ const initialState: ProductsState = {
 export const fetchProducts = createAsyncThunk<Product[]>(
   'products/fetch_products',
   getProducts,
+);
+
+export const addNewProduct = createAsyncThunk(
+  'products/add_product',
+  createProduct,
+);
+
+export const updateProductById = createAsyncThunk(
+  'products/update_product',
+  updateProduct,
+);
+
+export const removeProductById = createAsyncThunk(
+  'products/delete_product',
+  deleteProductById,
 );
 
 export const productsStateSlice = createSlice({
@@ -40,6 +57,26 @@ export const productsStateSlice = createSlice({
     builder.addCase(fetchProducts.rejected, (state, action) => {
       state.productsError = action.error.name || '';
       state.productsIsLoading = false;
+    });
+
+    builder.addCase(addNewProduct.fulfilled, (state, action) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      state.products.push(action.payload);
+    });
+
+    builder.addCase(updateProductById.fulfilled, (state, action) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      state.products = state.products.map(product => (
+        product.id === action.meta.arg.id ? action.payload : product
+      ));
+    });
+
+    builder.addCase(removeProductById.fulfilled, (state, action) => {
+      state.products = state.products.filter(product => (
+        product.id !== action.meta.arg
+      ));
     });
   },
 });

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Product } from '../../types/Product';
-import { ProductForm } from '../ProductForm';
+import { ProductComponent } from '../ProductComponent';
 
 type Props = {
   products: Product[];
@@ -24,7 +24,7 @@ export const ProductsTable: FC<Props> = ({ products }) => {
 
       <tbody>
         {products.map(product => (
-          <ProductForm currentProduct={product} key={product.id} />
+          <ProductComponent currentProduct={product} key={product.id} />
         ))}
       </tbody>
     </table>
