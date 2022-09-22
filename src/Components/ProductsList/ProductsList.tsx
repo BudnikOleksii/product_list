@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 import { ProductsTable } from '../ProductsTable';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectors } from '../../app/store';
-import { fetchProducts } from '../../features/productsSlice';
+import { changeSortType, fetchProducts } from '../../features/productsSlice';
 import { Loader } from '../Loader';
+import { SortType } from '../../types/SortType';
 
 export const ProductsList: FC = () => {
   const dispatch = useAppDispatch();
-  const { products, productsError, productsIsLoading } = useAppSelector(selectors.getProducts);
+  const {
+    productsError, productsIsLoading, sortType,
+  } = useAppSelector(selectors.getProducts);
+  const products = useAppSelector(selectors.getSortedProducts);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -36,6 +40,16 @@ export const ProductsList: FC = () => {
               >
                 Add a new product
               </Link>
+
+              <div className="select">
+                <select
+                  value={sortType}
+                  onChange={(event) => dispatch(changeSortType(event.target.value))}
+                >
+                  <option value={SortType.Name}>Sort by name</option>
+                  <option value={SortType.Count}>Sort by count</option>
+                </select>
+              </div>
             </div>
           )}
 

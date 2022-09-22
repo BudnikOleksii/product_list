@@ -4,17 +4,20 @@ import { Product } from '../types/Product';
 import {
   createProduct, deleteProductById, getProducts, updateProduct,
 } from '../api';
+import { SortType } from '../types/SortType';
 
 type ProductsState = {
   products: Product[];
   productsIsLoading: boolean;
   productsError: string;
+  sortType: SortType;
 };
 
 const initialState: ProductsState = {
   products: [],
   productsIsLoading: false,
   productsError: '',
+  sortType: SortType.Name,
 };
 
 export const fetchProducts = createAsyncThunk<Product[]>(
@@ -40,7 +43,11 @@ export const removeProductById = createAsyncThunk(
 export const productsStateSlice = createSlice({
   name: 'productsState',
   initialState,
-  reducers: {},
+  reducers: {
+    changeSortType: (state, action) => {
+      state.sortType = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.pending, (state) => {
       state.productsIsLoading = true;
@@ -75,4 +82,5 @@ export const productsStateSlice = createSlice({
   },
 });
 
+export const { changeSortType } = productsStateSlice.actions;
 export default productsStateSlice.reducer;
