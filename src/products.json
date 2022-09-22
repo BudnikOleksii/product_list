@@ -119,6 +119,18 @@
       },
       "weight": "139g",
       "comments": null
+    },
+    {
+      "imageUrl": "dhdhdh",
+      "name": "dhdhd",
+      "count": 3,
+      "size": {
+        "width": 2,
+        "height": 1
+      },
+      "weight": "1g",
+      "comments": [],
+      "id": 11
     }
   ],
   "comments": [
@@ -177,10 +189,10 @@
       "date": "24.08.2022"
     },
     {
-      "id": 10,
-      "productId": 10,
-      "description": "moor foul myth",
-      "date": "06.08.2022"
+      "productId": "11",
+      "description": "dhdh",
+      "date": "22.09.2022",
+      "id": 10
     }
   ]
 }

@@ -2,7 +2,7 @@ import { Id } from './Id';
 
 export interface Comment {
   id: Id,
-  productId: number,
+  productId: Id,
   description: string,
   date: string,
 }

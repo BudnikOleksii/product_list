@@ -22,3 +22,11 @@ export const deleteProductById = (id: Id) => {
 export const getCommentsByProductId = (id: Id): Promise<Comment[]> => {
   return client.get<Comment[]>(ENDPOINTS.commentsByProductId(id));
 };
+
+export const deleteComment = (comment: Comment) => {
+  return client.delete(ENDPOINTS.commentById(comment.id));
+};
+
+export const addNewComment = (comment: Omit<Comment, 'id'>): Promise<Comment> => {
+  return client.post<Comment>(ENDPOINTS.comments, comment);
+};

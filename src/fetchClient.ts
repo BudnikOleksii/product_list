@@ -6,6 +6,8 @@ export const ENDPOINTS = {
   products: '/products',
   productById: (id: Id) => `/products/${id}`,
   commentsByProductId: (id: Id) => `/comments?productId=${id}`,
+  commentById: (id: Id) => `/comments/${id}`,
+  comments: '/comments',
 };
 
 type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';

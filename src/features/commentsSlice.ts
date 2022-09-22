@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getCommentsByProductId } from '../api';
+import { addNewComment, deleteComment, getCommentsByProductId } from '../api';
 import { Comment } from '../types/Comment';
 
 type CommentsState = {
@@ -18,6 +18,16 @@ const initialState: CommentsState = {
 export const fetchComments = createAsyncThunk(
   'currentPost/fetch_comments',
   getCommentsByProductId,
+);
+
+export const removeComment = createAsyncThunk(
+  'currentPost/remove_comment',
+  deleteComment,
+);
+
+export const addNewCommentForProduct = createAsyncThunk(
+  'currentPost/add_comment',
+  addNewComment,
 );
 
 export const commentsSlice = createSlice({
@@ -38,6 +48,16 @@ export const commentsSlice = createSlice({
     builder.addCase(fetchComments.rejected, (state, action) => {
       state.commentsIsError = action.error.name || '';
       state.commentsIsLoading = false;
+    });
+
+    builder.addCase(removeComment.fulfilled, (state, action) => {
+      state.comments[action.meta.arg.productId] = state.comments[action.meta.arg.productId].filter(
+        comment => comment.id !== action.meta.arg.id,
+      );
+    });
+
+    builder.addCase(addNewCommentForProduct.fulfilled, (state, action) => {
+      state.comments[action.meta.arg.productId].push(action.payload);
     });
   },
 });
