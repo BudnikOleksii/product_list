@@ -41,7 +41,7 @@ export const ProductsList: FC = () => {
                 Add a new product
               </Link>
 
-              <div className="select">
+              <div className="select" style={{ width: '50%', margin: '0 auto' }}>
                 <select
                   value={sortType}
                   onChange={(event) => dispatch(changeSortType(event.target.value))}

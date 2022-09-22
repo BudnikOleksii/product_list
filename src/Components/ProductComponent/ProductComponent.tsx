@@ -64,11 +64,13 @@ export const ProductComponent: FC<Props> = ({ currentProduct }) => {
         </td>
       </tr>
 
-      <tr>
-        <td>
-          {isModalOpened && <ConfirmationModal onModalClose={setIsModalOpened} id={id} />}
-        </td>
-      </tr>
+      {isModalOpened && (
+        <tr>
+          <td>
+            <ConfirmationModal onModalClose={setIsModalOpened} id={id} />
+          </td>
+        </tr>
+      )}
     </>
   );
 };

@@ -15,7 +15,7 @@ export const ConfirmationModal: FC<Props> = ({ onModalClose, id }) => {
     <div className="modal is-active">
       <div className="modal-background" />
 
-      <div className="modal-card">
+      <div className="modal-card" style={{ width: '480px' }}>
         <header className="modal-card-head">
           <div
             className="modal-card-title has-text-weight-medium"
@@ -32,7 +32,7 @@ export const ConfirmationModal: FC<Props> = ({ onModalClose, id }) => {
           />
         </header>
 
-        <div className="modal-card-body is-flex is-justify-content-space-around">
+        <div className="modal-card-body is-flex is-justify-content-end">
           <button
             type="button"
             className="button is-primary"
@@ -41,6 +41,7 @@ export const ConfirmationModal: FC<Props> = ({ onModalClose, id }) => {
             Cancel
           </button>
           <button
+            style={{ marginLeft: '30px' }}
             type="button"
             className="button is-danger"
             onClick={() => {
