@@ -1,5 +1,12 @@
 # Products List
 
+### Technologies used:
+- React with Typescript
+- State managment library: Redux(Redux Toolkit)
+- CSS library: Bulma
+- Fake API: Json-server
+- Random data generator: [mockaroo](https://www.mockaroo.com)
+
 ### Instructions how to run application locally:
 1. Clone the repository to your local machine, open terminal and clone repo with command bellow:
 ```bash 
@@ -21,10 +28,10 @@ npm install -g json-server
 ```bash 
 json-server -p 4000 src/products.json
 ```
-6. Open one more terminal in the directory with Books_list app and run project by command:
+6. Open one more terminal in the directory with product_list app and run project by command:
 ```bash 
 npm start
 ```
 7. Open application in your browser `http://localhost:3000/`
 
-### You have ability to add, delete and edit books in dashboard
+### You have ability to add, delete and edit products in list
